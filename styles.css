@@ -1,0 +1,100 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f0f5f9;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    min-height: 80vh;
+}
+
+button {
+    background: #388e3c;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #1b5e20;
+}
+
+input {
+    padding: 8px;
+    margin-top: 10px;
+    width: 60%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+td.status-on {
+    background-color: #4caf50; /* Green */
+    color: white;
+}
+
+td.status-under {
+    background-color: #ffeb3b; /* Yellow */
+    color: black;
+}
+
+td.status-over {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.comment-over {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.comment-on {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}

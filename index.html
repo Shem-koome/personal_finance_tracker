@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h2><b>PERSONAL FINANCE TRACKER</b></h2>
+    </header>
+
+    <div class="container">
+        <div id="step1">
+            <label for="income">Enter your Monthly Income (KES):</label>
+            <input type="number" id="income" required>
+            <button onclick="generateBudget()">Generate Budget</button>
+        </div>
+
+        <div id="step2" style="display:none;">
+            <h3>Budget Breakdown</h3>
+            <table id="budgetTable">
+                <tr><th>Category</th><th>Budget (KES)</th><th>Actual Spending (KES)</th></tr>
+            </table>
+            <button onclick="analyzeSpending()">Analyze Spending</button>
+            <p class="error" id="errorMsg" style="display:none;">Please fill in all actual spending fields before analysis.</p>
+        </div>
+
+        <div id="results" style="display:none;">
+            <h3>Spending Analysis</h3>
+            <table id="feedbackTable">
+                <tr><th>Category</th><th>Budgeted (KES)</th><th>Spent (KES)</th><th>Difference</th><th>Status</th></tr>
+            </table>
+            <div id="overallComment" class="comment"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
